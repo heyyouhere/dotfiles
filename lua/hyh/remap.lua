@@ -2,6 +2,7 @@ vim.g.mapleader = " "
 vim.keymap.set("n" ,"<leader>e", ':Explore<CR>')
 vim.keymap.set("n", "<leader>p", ':w | !clear; python3 % <CR>')
 vim.keymap.set("n", "<leader>r", ':w | !clear; cargo run <CR>')
+vim.keymap.set("n", "<leader>q", ':q!<CR>')
 
 vim.opt.number = true
 vim.opt.relativenumber = true
