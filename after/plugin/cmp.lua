@@ -1,9 +1,7 @@
 local cmp = require('cmp')
 
-
-
 cmp.setup({
   mapping = {
-      ['Tab'] = cmp.mapping.confirm({select = true}),
+      ['<Tab>'] = cmp.mapping.confirm({select = true}),
   }
 })

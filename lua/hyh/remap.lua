@@ -1,8 +1,16 @@
 vim.g.mapleader = " "
-vim.keymap.set("n" ,"<leader>e", ':Explore<CR>')
-vim.keymap.set("n", "<leader>p", ':w | !clear; python3 % <CR>')
-vim.keymap.set("n", "<leader>r", ':w | !clear; cargo run <CR>')
-vim.keymap.set("n", "<leader>q", ':q!<CR>')
+vim.keymap.set("n", "<leader>e", ':Explore<CR>')
+vim.keymap.set("n", "<leader>q", ':q! <CR>')
+vim.keymap.set("n", "<leader>w", ':w <CR>')
+--vim.cmd('set autochdir')
+
+vim.keymap.set("n", "<leader>t",  ':w | terminal <CR>')
+vim.keymap.set("n", "<leader>pr", ':w | vsplit | terminal python3 % <CR>')
+vim.keymap.set("n", "<leader>pi", ':w | vsplit | terminal python3 -i % <CR>')
+vim.keymap.set("n", "<leader>rr", ':w | vsplit | terminal cargo run <CR>')
+vim.keymap.set("n", "<leader>rb", ':w | vsplit | terminal cargo build <CR>')
+vim.keymap.set("n", "<leader>n",  ':noh <CR>')
+vim.keymap.set("n", "<leader>w",  '<C-w>')
 
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -38,7 +46,6 @@ vim.cmd('filetype plugin on')
 vim.cmd('filetype indent on')
 
 -- Enable syntax highlighting
-vim.cmd('syntax on')
 
 -- Disable backup files
 vim.opt.backup = false
