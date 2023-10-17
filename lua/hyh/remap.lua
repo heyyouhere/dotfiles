@@ -4,16 +4,21 @@ vim.keymap.set("n", "<leader>q", ':q! <CR>')
 vim.keymap.set("n", "<leader>w", ':w <CR>')
 --vim.cmd('set autochdir')
 
-vim.keymap.set("n", "<leader>t",  ':w | terminal <CR>')
 vim.keymap.set("n", "<leader>pr", ':w | vsplit | terminal python3 % <CR>')
 vim.keymap.set("n", "<leader>pi", ':w | vsplit | terminal python3 -i % <CR>')
 vim.keymap.set("n", "<leader>rr", ':w | vsplit | terminal cargo run <CR>')
 vim.keymap.set("n", "<leader>rb", ':w | vsplit | terminal cargo build <CR>')
 vim.keymap.set("n", "<leader>n",  ':noh <CR>')
 vim.keymap.set("n", "<leader>w",  '<C-w>')
+vim.keymap.set("n", "<leader>ws", '<C-w>s<C-w>j | :Explore<CR>')
+vim.keymap.set("n", "<leader>wv", '<C-w>v<C-w>l | :Explore<CR>')
+vim.keymap.set("n", "<leader>t",  '<C-w>v<C-w>l | :terminal <CR> i')
+vim.keymap.set("t", "<Esc>",  '<C-\\><C-n>')
 
-vim.opt.number = true
+
+
 vim.opt.relativenumber = true
+
 
 -- Set the undodir option to the undo directory
 vim.opt.undodir = vim.fn.stdpath('data') .. '/undo'
