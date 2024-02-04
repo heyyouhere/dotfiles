@@ -47,6 +47,7 @@ vim.opt.list = true
 vim.opt.listchars:append({ eol = '$', space = '⋅' })
 -- Enable filetype detection, plugins and indentation
 vim.cmd('filetype on')
+vim.cmd('set linebreak')
 vim.cmd('filetype plugin on')
 vim.cmd('filetype indent on')
 
@@ -63,3 +64,8 @@ vim.opt.showcmd = true
 
 -- Set cursor shape
 vim.opt.guicursor = 'n-v-c:block-Cursor'
+
+-- Sometimes it is usefull, i forget to release Shift
+vim.api.nvim_create_user_command('W',function()
+  vim.cmd(":w")
+end,{})
