@@ -12,8 +12,9 @@ vim.keymap.set("n", "<leader>n",  ':noh <CR>')
 vim.keymap.set("n", "<leader>w",  '<C-w>')
 vim.keymap.set("n", "<leader>ws", '<C-w>s<C-w>j | :Explore<CR>')
 vim.keymap.set("n", "<leader>wv", '<C-w>v<C-w>l | :Explore<CR>')
-vim.keymap.set("n", "<leader>t",  '<C-w>v<C-w>l | :terminal <CR> i')
-vim.keymap.set("t", "<Esc>",  '<C-\\><C-n>')
+
+
+
 
 
 
@@ -31,7 +32,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 
 -- Set color scheme and background
-vim.cmd('colorscheme default')
+--vim.cmd('colorscheme default')
 vim.opt.background = 'dark'
 
 -- Set indentation settings
