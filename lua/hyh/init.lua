@@ -1,4 +1,5 @@
 require("hyh.remap")
+require("hyh.toterm")
 require('hyh.packer')
 require('hyh.lsp')
 require('hyh.tmp')
