@@ -73,12 +73,11 @@ end
 
 
 
-
-function html()
+function HTML()
     template(basic_html)
 end
 
-function flask()
+function FLASK()
     template(basic_flask)
 end
 
