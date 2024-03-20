@@ -19,7 +19,13 @@ end
 vim.keymap.set("n", "<leader>tp",  ':lua _PYTERM()<CR>')
 
 function _BTOPTERM()
-   local btopterm = terminal:new({size = 100, cmd = "btop",direction="float",  hidden = true})
+   local btopterm = terminal:new({size = 100, cmd = "btop", direction="float",  hidden = true})
    btopterm:toggle()
 end
 vim.keymap.set("n", "<leader>tb",  ':lua _BTOPTERM()<CR>')
+
+function _LAZYGITTERM()
+   local LAZYGITterm = terminal:new({size = 100, cmd = "lazygit", direction="float",  hidden = true})
+   LAZYGITterm:toggle()
+end
+vim.keymap.set("n", "<leader>tg",  ':lua _LAZYGITTERM()<CR>')
