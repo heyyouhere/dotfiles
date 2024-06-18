@@ -15,10 +15,26 @@ vim.keymap.set("n", "<leader>wv", '<C-w>v<C-w>l | :Explore<CR>')
 
 
 
+-- Diagnostics
+vim.keymap.set("n", "<leader>d", ':lua vim.diagnostic.goto_next()<CR>zz')
+vim.keymap.set("n", "<leader>D", ':lua vim.diagnostic.goto_prev()<CR>zz')
 
+
+
+-- Flash on yank
+vim.api.nvim_create_autocmd('TextYankPost', {
+  desc = 'Highlight when yanking (copying) text',
+  group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+})
+
+vim.opt.cursorline = true
 
 
 vim.opt.relativenumber = true
+vim.opt.scrolloff = 10
 
 
 -- Set the undodir option to the undo directory
@@ -32,7 +48,6 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 
 -- Set color scheme and background
---vim.cmd('colorscheme default')
 vim.opt.background = 'dark'
 
 -- Set indentation settings
@@ -70,3 +85,6 @@ vim.opt.guicursor = 'n-v-c:block-Cursor'
 vim.api.nvim_create_user_command('W',function()
   vim.cmd(":w")
 end,{})
+
+--    "word"
+--vim.keymap.set("n", "\"", "ea\"<C-c>bi\"<C-c>e<C-c>")

@@ -9,7 +9,7 @@ return require('packer').startup(function(use)
       require("toggleterm").setup()
     end}
     use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.5',
+    'nvim-telescope/telescope.nvim',
       requires = { {'nvim-lua/plenary.nvim'} }
     }
     use 'folke/lsp-colors.nvim'
@@ -28,7 +28,7 @@ return require('packer').startup(function(use)
         {'williamboman/mason-lspconfig.nvim'}, -- Optional
 
         {'wbthomason/packer.nvim'},
-        {'thimc/gruber-darker.nvim'},
+        {'heyyouhere/gruber-darker.nvim'},
 
         -- Autocompletion
         {'hrsh7th/nvim-cmp'},     -- Required
@@ -36,7 +36,7 @@ return require('packer').startup(function(use)
         {'L3MON4D3/LuaSnip'},     -- Required
     },
     use 'habamax/vim-godot',
-
+    use 'tpope/vim-commentary',
 }
 end)
 

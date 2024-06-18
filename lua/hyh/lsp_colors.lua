@@ -14,4 +14,5 @@ local _ = {
     "slate",
 }
 
-vim.cmd("colorscheme gruber-darker")
+vim.cmd('colorscheme gruber-darker')
+-- vim.cmd("colorscheme habamax")

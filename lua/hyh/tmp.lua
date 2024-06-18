@@ -12,6 +12,14 @@ local basic_flask = {
     "app.run(host='0.0.0.0', port=80)",
 }
 
+local lorem = {
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+}
+
+local test_image ={
+"https://magnum.design/static/media/%D0%90%D0%BB%D1%8C%D1%84%D0%B0%D0%B1%D0%B0%D0%BD%D0%BA%202022-min.dec743210057321b020d.png"
+
+} 
 
 local basic_html ={
         "<!DOCTYPE html>",
@@ -33,7 +41,7 @@ local basic_html ={
 local MIT_lines = {
 "    MIT License",
 "",
-"Copyright (c) 2023 Maxim Kalanchekaev",
+"Copyright (c) 2024 Maxim Kalanchekaev",
 "",
 "Permission is hereby granted, free of charge, to any person obtaining a copy",
 "of this software and associated documentation files (the \"Software\"), to deal",
@@ -81,6 +89,10 @@ function FLASK()
     template(basic_flask)
 end
 
+
+function LOREM()
+    template(lorem)
+end
 
 function MIT()
     template(MIT_lines)

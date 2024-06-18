@@ -54,5 +54,5 @@ end
 
 
 -- Key mapping to invoke the get_visual_selection function
-vim.api.nvim_set_keymap('v', '_', ':lua format_string_by_char("=")<CR>', { noremap = true })
-vim.api.nvim_set_keymap('v', ';', ':lua format_string_by_char(":")<CR>', { noremap = true })
+-- vim.api.nvim_set_keymap('v', '_', ':lua format_string_by_char("=")<CR>', { noremap = true })
+-- vim.api.nvim_set_keymap('v', ';', ':lua format_string_by_char(":")<CR>', { noremap = true })
