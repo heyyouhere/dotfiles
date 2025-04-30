@@ -1,5 +1,4 @@
-vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>e", ':Explore<CR>')
+vim.keymap.set("n", "<leader>e", ':Oil<CR>')
 vim.keymap.set("n", "<leader>q", ':q! <CR>')
 vim.keymap.set("n", "<leader>w", ':w <CR>')
 --vim.cmd('set autochdir')
@@ -88,3 +87,14 @@ end,{})
 
 --    "word"
 --vim.keymap.set("n", "\"", "ea\"<C-c>bi\"<C-c>e<C-c>")
+
+
+vim.api.nvim_set_keymap('n', '<Up>', '<Nop>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Down>', '<Nop>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Left>', '<Nop>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Right>', '<Nop>', { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap('i', '<Esc>', '<Nop>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', '<Esc>', '<Nop>', { noremap = true, silent = true })
+vim.opt.termguicolors = true
+vim.cmd("set guicursor=a:blinkwait5-blinkon5-blinkoff5")

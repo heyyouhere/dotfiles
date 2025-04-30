@@ -1,6 +1,3 @@
-vim.opt.termguicolors = true
-vim.cmd("set guicursor=a:blinkwait5-blinkon5-blinkoff5")
-
 local _ = {
     -- Currently using
     "gruber-darker",

@@ -1,7 +1,0 @@
-require("hyh.remap")
-require("hyh.toterm")
-require('hyh.packer')
-require('hyh.lsp')
-require('hyh.tmp')
-require('hyh.lsp_colors')
-require('hyh.align_by_char')

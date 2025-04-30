@@ -1,1 +1,5 @@
-require('hyh')
+require("config.lazy")
+require("config.remap")
+require("config.colorscheme")
+require("config.term")
+require("config.lsp")

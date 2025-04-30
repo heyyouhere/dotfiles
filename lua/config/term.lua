@@ -1,6 +1,5 @@
 vim.keymap.set("n", "<leader>tt",  ':ToggleTerm<CR>')
-vim.keymap.set("t", "<Esc>",  '<C-\\><C-n>')
-
+vim.keymap.set("t", "<C-x>",  '<C-\\><C-n>')
 
 
 local toggle = require("toggleterm")
@@ -8,7 +7,6 @@ toggle.setup({
     direction = "horizontal",
     hide_numbers = false
 })
-
 
 
 local terminal = require("toggleterm.terminal").Terminal
