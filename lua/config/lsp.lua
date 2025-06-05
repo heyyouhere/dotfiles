@@ -30,4 +30,23 @@ require('mason-lspconfig').setup({
     },
 })
 
+require'lspconfig'.pylsp.setup{
+    settings = {
+        pylsp = {
+            configurationSources = { "flake8" },
+            plugins = {
+                flake8 = {
+                    maxLineLength = 100  -- Set your desired line width here
+                },
+                pycodestyle = {
+                    maxLineLength = 100  -- Set your desired line width here
+                },
+                pyflakes = {
+                    maxLineLength = 100  -- Set your desired line width here
+                }
+            }
+        }
+    }
+}
+
 vim.keymap.set("n", "<leader>f", ':lua vim.lsp.buf.format()<CR>')

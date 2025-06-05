@@ -56,6 +56,25 @@ require("lazy").setup({
     { 'habamax/vim-godot' },
     { 'tpope/vim-commentary' },
     { 'cappyzawa/trim.nvim' },
-    { 'stevearc/oil.nvim',   opts = {}, dependencies = { { "echasnovski/mini.icons", opts = {} } }, lazy = false, }
-    -- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if you prefer nvim-web-devicons
+    { 'stevearc/oil.nvim',   opts = {}, dependencies = { { "echasnovski/mini.icons", opts = {} } }, lazy = false, },
+    { "vague2k/vague.nvim",
+        config = function()
+            -- NOTE: you do not need to call setup if you don't want to.
+            require("vague").setup({
+                -- optional configuration here
+            })
+        end
+    },
+    {
+  'nvim-orgmode/orgmode',
+  event = 'VeryLazy',
+  ft = { 'org' },
+  config = function()
+    -- Setup orgmode
+    require('orgmode').setup({
+      org_agenda_files = '~/orgfiles/**/*',
+      org_default_notes_file = '~/orgfiles/quicknote.org',
+    })
+  end,
+},
 })
