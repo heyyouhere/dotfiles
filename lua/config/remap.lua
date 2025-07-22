@@ -4,10 +4,6 @@ vim.keymap.set("n", "<leader>q", ':q! <CR>')
 vim.keymap.set("n", "<leader>w", ':w <CR>')
 --vim.cmd('set autochdir')
 
-vim.keymap.set("n", "<leader>pr", ':w | vsplit | terminal python3 % <CR>')
-vim.keymap.set("n", "<leader>pi", ':w | vsplit | terminal python3 -i % <CR>')
-vim.keymap.set("n", "<leader>rr", ':w | vsplit | terminal cargo run <CR>')
-vim.keymap.set("n", "<leader>rb", ':w | vsplit | terminal cargo build <CR>')
 vim.keymap.set("n", "<leader>n",  ':noh <CR>')
 vim.keymap.set("n", "<leader>w",  '<C-w>')
 vim.keymap.set("n", "<leader>ws", '<C-w>s<C-w>j | :Explore<CR>')
@@ -20,6 +16,7 @@ vim.keymap.set("n", "<leader>d", ':lua vim.diagnostic.goto_next()<CR>zz')
 vim.keymap.set("n", "<leader>D", ':lua vim.diagnostic.goto_prev()<CR>zz')
 
 
+vim.keymap.set("n", "<leader>m", ':make<CR>')
 
 -- Flash on yank
 vim.api.nvim_create_autocmd('TextYankPost', {
