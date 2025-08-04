@@ -16,7 +16,7 @@ vim.keymap.set("n", "<leader>d", ':lua vim.diagnostic.goto_next()<CR>zz')
 vim.keymap.set("n", "<leader>D", ':lua vim.diagnostic.goto_prev()<CR>zz')
 
 
-vim.keymap.set("n", "<leader>m", ':make<CR>')
+vim.keymap.set("n", "<leader>m", ':make!<CR>');
 
 -- Flash on yank
 vim.api.nvim_create_autocmd('TextYankPost', {
