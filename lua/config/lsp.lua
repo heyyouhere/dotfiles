@@ -30,6 +30,28 @@ require('mason-lspconfig').setup({
     },
 })
 
+
+require'lspconfig'.lua_ls.setup {
+    settings = {
+        Lua = {
+            runtime = {
+                version = 'LuaJIT', -- Use LuaJIT for LÖVE
+            },
+            diagnostics = {
+                globals = { 'vim' },
+            },
+            workspace = {
+                library = {
+                    [vim.fn.expand('$VIMRUNTIME/lua')] = true,
+                    [vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true,
+                    [vim.fn.expand "${3rd}/love2d/library"] = true,
+                    checkThirdParty = "Apply"
+                },
+            },
+        },
+    },
+}
+
 require'lspconfig'.pylsp.setup{
     settings = {
         pylsp = {

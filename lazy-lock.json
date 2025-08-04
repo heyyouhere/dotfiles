@@ -4,6 +4,7 @@
   "gruber-darker.nvim": { "branch": "main", "commit": "2945a8ea5e1dad4f1e65b22b5ff123b06509d78a" },
   "harpoon": { "branch": "master", "commit": "1bc17e3e42ea3c46b33c0bbad6a880792692a1b3" },
   "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
+  "love2d.nvim": { "branch": "main", "commit": "ad3f00ace4db7b50f5e7293afb7e8c91949742eb" },
   "lsp-colors.nvim": { "branch": "main", "commit": "2bbe7541747fd339bdd8923fc45631a09bb4f1e5" },
   "lsp-zero.nvim": { "branch": "v4.x", "commit": "2afa32e732d7b36e80cd5241fbdc4a38e123c4e0" },
   "mason-lspconfig.nvim": { "branch": "main", "commit": "1a31f824b9cd5bc6f342fc29e9a53b60d74af245" },

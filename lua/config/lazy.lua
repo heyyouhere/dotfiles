@@ -58,23 +58,33 @@ require("lazy").setup({
     { 'cappyzawa/trim.nvim' },
     { 'stevearc/oil.nvim',   opts = {}, dependencies = { { "echasnovski/mini.icons", opts = {} } }, lazy = false, },
     { "vague2k/vague.nvim",
-        config = function()
-            -- NOTE: you do not need to call setup if you don't want to.
-            require("vague").setup({
-                -- optional configuration here
-            })
-        end
-    },
-    {
-  'nvim-orgmode/orgmode',
-  event = 'VeryLazy',
-  ft = { 'org' },
-  config = function()
-    -- Setup orgmode
-    require('orgmode').setup({
-      org_agenda_files = '~/orgfiles/**/*',
-      org_default_notes_file = '~/orgfiles/quicknote.org',
-    })
-  end,
+    config = function() -- NOTE: you do not need to call setup if you don't want to.
+        require("vague").setup({
+            -- optional configuration here
+        })
+    end
 },
+{
+    'nvim-orgmode/orgmode',
+    event = 'VeryLazy',
+    ft = { 'org' },
+    config = function()
+        -- Setup orgmode
+        require('orgmode').setup({
+            org_agenda_files = '~/orgfiles/**/*',
+            org_default_notes_file = '~/orgfiles/quicknote.org',
+        })
+    end,
+},
+{
+    "S1M0N38/love2d.nvim",
+    event = "VeryLazy",
+    version = "2.*",
+    opts = { },
+    keys = {
+        { "<leader>v", ft = "lua", desc = "LÖVE" },
+        { "<leader>lr", "<cmd>LoveRun<cr>", ft = "lua", desc = "Run LÖVE" },
+        { "<leader>ls", "<cmd>LoveStop<cr>", ft = "lua", desc = "Stop LÖVE" },
+    },
+}
 })
