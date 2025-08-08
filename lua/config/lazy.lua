@@ -47,9 +47,6 @@ require("lazy").setup({
             { 'williamboman/mason-lspconfig.nvim' }, -- Optional
             { 'hrsh7th/nvim-cmp' },           -- Required
             { 'hrsh7th/cmp-nvim-lsp' },       -- Required
-
-
-
             { 'L3MON4D3/LuaSnip' }, -- Required
         }
     },
@@ -57,13 +54,7 @@ require("lazy").setup({
     { 'tpope/vim-commentary' },
     { 'cappyzawa/trim.nvim' },
     { 'stevearc/oil.nvim',   opts = {}, dependencies = { { "echasnovski/mini.icons", opts = {} } }, lazy = false, },
-    { "vague2k/vague.nvim",
-    config = function() -- NOTE: you do not need to call setup if you don't want to.
-        require("vague").setup({
-            -- optional configuration here
-        })
-    end
-},
+    { "vague2k/vague.nvim"},
 {
     'nvim-orgmode/orgmode',
     event = 'VeryLazy',
@@ -76,15 +67,4 @@ require("lazy").setup({
         })
     end,
 },
-{
-    "S1M0N38/love2d.nvim",
-    event = "VeryLazy",
-    version = "2.*",
-    opts = { },
-    keys = {
-        { "<leader>v", ft = "lua", desc = "LÖVE" },
-        { "<leader>lr", "<cmd>LoveRun<cr>", ft = "lua", desc = "Run LÖVE" },
-        { "<leader>ls", "<cmd>LoveStop<cr>", ft = "lua", desc = "Stop LÖVE" },
-    },
-}
 })
