@@ -1,9 +1,10 @@
 vim.keymap.set("n", "<leader>e", ':Oil<CR>')
-vim.keymap.set("n", "<leader>у", ':Oil<CR>')
-vim.keymap.set("n", "<leader>q", ':q! <CR>')
-vim.keymap.set("n", "<leader>w", ':w <CR>')
-vim.keymap.set("n", "<leader>n",  ':noh <CR>')
+vim.keymap.set("n", "<leader>w", ':w<CR>')
+vim.keymap.set("n", "<leader>n",  ':noh<CR>')
 
+-- jump windows
+vim.keymap.set('n', '<C-w>s', '<C-w>s<C-w>w:Oil<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-w>v', '<C-w>v<C-w>w:Oil<CR>', { noremap = true, silent = true })
 
 -- Diagnostics
 vim.keymap.set("n", "<leader>d", ':lua vim.diagnostic.goto_next()<CR>zz')
