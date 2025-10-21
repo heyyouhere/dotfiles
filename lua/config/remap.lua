@@ -11,6 +11,11 @@ vim.keymap.set("n", "<leader>d", ':lua vim.diagnostic.goto_next()<CR>zz')
 vim.keymap.set("n", "<leader>D", ':lua vim.diagnostic.goto_prev()<CR>zz')
 
 
+-- quickfix
+vim.keymap.set("n", "<leader>c", ':cn<CR>zz')
+vim.keymap.set("n", "<leader>C", ':cp<CR>zz')
+
+
 -- Flash on yank
 vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight when yanking (copying) text',
@@ -84,4 +89,5 @@ vim.api.nvim_set_keymap('n', '<Right>', '<Nop>', { noremap = true, silent = true
 vim.api.nvim_set_keymap('i', '<Esc>', '<Nop>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('v', '<Esc>', '<Nop>', { noremap = true, silent = true })
 vim.opt.termguicolors = true
+
 vim.cmd("set guicursor=a:blinkwait5-blinkon5-blinkoff5")

@@ -21,6 +21,15 @@ cmp.setup({
 
 
 require('mason').setup({})
+require('mason-lspconfig').setup({
+    ensure_installed = { 'lua_ls', 'rust_analyzer' },
+    handlers = {
+        function(server_name)
+            require('lspconfig')[server_name].setup({})
+        end,
+    },
+})
+
 
 require'lspconfig'.lua_ls.setup {
     settings = {
@@ -63,3 +72,5 @@ require'lspconfig'.pylsp.setup{
 }
 
 vim.keymap.set("n", "<leader>f", ':lua vim.lsp.buf.format()<CR>')
+vim.keymap.set("n", "<leader>a", vim.lsp.buf.code_action)
+vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition)
