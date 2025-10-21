@@ -71,6 +71,12 @@ require'lspconfig'.pylsp.setup{
     }
 }
 
+function add(x, y)
+    return x+y
+end
+
+
 vim.keymap.set("n", "<leader>f", ':lua vim.lsp.buf.format()<CR>')
 vim.keymap.set("n", "<leader>a", vim.lsp.buf.code_action)
 vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition)
+vim.keymap.set('i', '<M-a>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', { noremap = true, silent = true })
