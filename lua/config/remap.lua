@@ -1,6 +1,6 @@
 vim.keymap.set("n", "<leader>e", ':Oil<CR>')
 vim.keymap.set("n", "<leader>w", ':w<CR>')
-vim.keymap.set("n", "<leader>n",  ':noh<CR>')
+vim.keymap.set("n", "<leader>n", ':noh<CR>')
 
 -- jump windows
 vim.keymap.set('n', '<C-w>s', '<C-w>s<C-w>w:Oil<CR>', { noremap = true, silent = true })
@@ -18,15 +18,17 @@ vim.keymap.set("n", "<leader>C", ':cp<CR>zz')
 
 -- Flash on yank
 vim.api.nvim_create_autocmd('TextYankPost', {
-  desc = 'Highlight when yanking (copying) text',
-  group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
-  callback = function()
-    vim.highlight.on_yank()
-  end,
+    desc = 'Highlight when yanking (copying) text',
+    group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
+    callback = function()
+        vim.highlight.on_yank()
+    end,
 })
+
 
 vim.opt.cursorline = true
 vim.opt.scrolloff = 10
+vim.o.winborder = 'rounded'
 
 -- Set the undodir option to the undo directory
 vim.opt.undodir = vim.fn.stdpath('data') .. '/undo'
@@ -72,13 +74,13 @@ vim.opt.showcmd = true
 vim.opt.guicursor = 'n-v-c:block-Cursor'
 
 -- Sometimes it is usefull, i forget to release Shift
-vim.api.nvim_create_user_command('W',function()
-  vim.cmd(":w")
-end,{})
+vim.api.nvim_create_user_command('W', function()
+    vim.cmd(":w")
+end, {})
 
-vim.api.nvim_create_user_command('Wq',function()
-  vim.cmd(":wq")
-end,{})
+vim.api.nvim_create_user_command('Wq', function()
+    vim.cmd(":wq")
+end, {})
 
 -- Disallow arrows and ESC
 vim.api.nvim_set_keymap('n', '<Up>', '<Nop>', { noremap = true, silent = true })
@@ -88,6 +90,8 @@ vim.api.nvim_set_keymap('n', '<Right>', '<Nop>', { noremap = true, silent = true
 
 vim.api.nvim_set_keymap('i', '<Esc>', '<Nop>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('v', '<Esc>', '<Nop>', { noremap = true, silent = true })
+
+
 vim.opt.termguicolors = true
 
 vim.cmd("set guicursor=a:blinkwait5-blinkon5-blinkoff5")

@@ -12,6 +12,4 @@ local schemes = {
 }
 
 vim.cmd('colorscheme gruber-darker')
-
-
 -- vim.cmd("colorscheme habamax")
