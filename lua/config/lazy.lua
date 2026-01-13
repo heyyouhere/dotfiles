@@ -45,26 +45,31 @@ require("lazy").setup({
                 end
             },
             { 'williamboman/mason-lspconfig.nvim' }, -- Optional
-            { 'hrsh7th/nvim-cmp' },           -- Required
-            { 'hrsh7th/cmp-nvim-lsp' },       -- Required
-            { 'L3MON4D3/LuaSnip' }, -- Required
+            { 'hrsh7th/nvim-cmp' },                  -- Required
+            { 'hrsh7th/cmp-nvim-lsp' },              -- Required
+            { 'L3MON4D3/LuaSnip' },                  -- Required
         }
     },
     { 'habamax/vim-godot' },
     { 'tpope/vim-commentary' },
     { 'cappyzawa/trim.nvim' },
     { 'stevearc/oil.nvim',   opts = {}, dependencies = { { "echasnovski/mini.icons", opts = {} } }, lazy = false, },
-    { "vague2k/vague.nvim"},
-{
-    'nvim-orgmode/orgmode',
-    event = 'VeryLazy',
-    ft = { 'org' },
-    config = function()
-        -- Setup orgmode
-        require('orgmode').setup({
-            org_agenda_files = '~/orgfiles/**/*',
-            org_default_notes_file = '~/orgfiles/quicknote.org',
-        })
-    end,
-},
+    { "vague2k/vague.nvim" },
+    {
+        'nvim-orgmode/orgmode',
+        event = 'VeryLazy',
+        ft = { 'org' },
+        config = function()
+            -- Setup orgmode
+            require('orgmode').setup({
+                org_agenda_files = '~/orgfiles/**/*',
+                org_default_notes_file = '~/orgfiles/quicknote.org',
+            })
+        end,
+    },
+    {'norcalli/nvim-colorizer.lua',
+        config = function()
+            vim.cmd("set termguicolors")
+            require("colorizer").setup()
+        end },
 })
