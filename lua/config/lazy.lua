@@ -56,6 +56,16 @@ require("lazy").setup({
     { 'stevearc/oil.nvim',   opts = {}, dependencies = { { "echasnovski/mini.icons", opts = {} } }, lazy = false, },
     { "vague2k/vague.nvim" },
     {
+        "f-person/git-blame.nvim",
+        event = "VeryLazy",
+        opts = {
+            enabled = false, -- if you want to enable the plugin
+            message_template = " <summary> • <date> • <author> • <<sha>>",
+            date_format = "%m-%d-%Y %H:%M:%S",
+            virtual_text_column = 1,
+        },
+    },
+    {
         'nvim-orgmode/orgmode',
         event = 'VeryLazy',
         ft = { 'org' },
@@ -67,9 +77,11 @@ require("lazy").setup({
             })
         end,
     },
-    {'norcalli/nvim-colorizer.lua',
+    {
+        'norcalli/nvim-colorizer.lua',
         config = function()
             vim.cmd("set termguicolors")
             require("colorizer").setup()
-        end },
+        end
+    },
 })

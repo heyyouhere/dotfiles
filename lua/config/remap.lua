@@ -15,6 +15,9 @@ vim.keymap.set("n", "<leader>D", ':lua vim.diagnostic.goto_prev()<CR>zz')
 vim.keymap.set("n", "<leader>c", ':cn<CR>zz')
 vim.keymap.set("n", "<leader>C", ':cp<CR>zz')
 
+-- gitblame
+
+vim.keymap.set("n", "<leader>gb", ':GitBlameToggle<CR>')
 
 -- Flash on yank
 vim.api.nvim_create_autocmd('TextYankPost', {
